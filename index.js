@@ -107,7 +107,7 @@ const showapidata = api =>{
             <div>
             <h3>Integrations</h3>
             <ul>
-              <li>${api.integrations ? api.integrations[0] : 'not avaliable'}</li>
+              <li>${api.integrations ? api.integrations[0] : 'not avaliable data'}</li>
               <li>${api.integrations && api.integrations[1] ? api.integrations: 'not avaliable'}</li>
               <li>${api.integrations && api.integrations[2] ? api.integrations:  'not avaliable'}</li>
             </ul>
