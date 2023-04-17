@@ -1,11 +1,11 @@
 const fetchapi = ()=>{
-    
   fetch('https://openapi.programming-hero.com/api/ai/tools')
   .then(res => res.json())
   .then(data => display(data.data.tools.slice(0,3)))
 }
 
 const display= (tool)=>{
+  
   
     // console.log(data)
     const fetchdata = document.getElementById('fatch-data');
@@ -45,7 +45,9 @@ const display= (tool)=>{
         fetchdata.appendChild(div);
         
         
+      
     });
+    
 }
 fetchapi()
 
@@ -55,6 +57,7 @@ const seeMore = () =>{
   fetch(url)
   .then(res => res.json())
   .then(data => display(data.data.tools))
+  
 }
 
 
@@ -62,8 +65,8 @@ const seeMore = () =>{
 
 
 
+
 const showApiDetail= id =>{
- 
 const url = `https://openapi.programming-hero.com/api/ai/tool/${id}`;
 fetch(url)
 .then(res => res.json())
@@ -138,6 +141,8 @@ const toggleSpinner = isLoading =>{
   const LoaderSection = document.getElementById('loder');
   if(isLoading){
     LoaderSection.classList.remove('d-none')
+  }else{
+    LoaderSection.classList.add(d-none);
   }
 }
  
