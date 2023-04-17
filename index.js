@@ -43,11 +43,7 @@ const display= (tool)=>{
         
         `;
         fetchdata.appendChild(div);
-        
-        
-      
     });
-    
 }
 fetchapi()
 
@@ -57,7 +53,6 @@ const seeMore = () =>{
   fetch(url)
   .then(res => res.json())
   .then(data => display(data.data.tools))
-  
 }
 
 
@@ -71,12 +66,10 @@ const url = `https://openapi.programming-hero.com/api/ai/tool/${id}`;
 fetch(url)
 .then(res => res.json())
 .then((data)=>showapidata(data.data))
-
+toggleSpinner(false);
 }
 
 const showapidata = api =>{
- 
-  console.log(api.description)
  const modalBody = document.getElementById('first-card-body');
  modalBody.innerHTML=`
             <h5 class="card-title">${api.description}</h5>
@@ -140,9 +133,7 @@ const showapidata = api =>{
 const toggleSpinner = isLoading =>{
   const LoaderSection = document.getElementById('loder');
   if(isLoading){
-    LoaderSection.classList.remove('d-none')
-  }else{
-    LoaderSection.classList.add(d-none);
+    LoaderSection.classList.add('d-none')
   }
 }
  
